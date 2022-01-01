@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2.1 新增input元素类型 p19 range</title>
+    <script>
+        window.onload = function () {
+            let input  = document.getElementsByTagName("input")[0];
+            let output = document.getElementsByTagName("output")[0];
+
+            // 获取range的初始值
+            output.value = input.value;
+            // 拖动滑动条，改变output的值
+            input.onchange = function () {
+                output.value = input.value;
+            };
+        }
+    </script>
+</head>
+<body>
+    <form method="post">
+        <input type="range" min="-10" max="10" step="2" value="-10" />
+        <output></output>
+    </form>
+</body>
+</html>
