@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.3.2 直线的绘制</title>
+    <script>
+        // 定义函数$$(id)获取DOM对象元素
+        function $$(id){
+            return document.getElementById(id);
+        }
+        // 开始绘制直线
+        window.onload = function(){
+            var cnv = $$("canvas");
+            var ctx = cnv.getContext("2d")
+
+            // 1.一条直线
+            ctx.moveTo(100,150);
+            ctx.lineTo(50,150);
+
+            // 2.多条直线
+            // ctx.moveTo(110,160);  // 注释，让其直接执行lineTo()，将会连起来
+            ctx.lineTo(90,160)
+            ctx.stroke();
+
+            // 绘制三角形
+            ctx.moveTo(30,60);  // 左点
+            ctx.lineTo(60,30);  // 顶点
+            ctx.lineTo(60,60);  // 右下点
+            ctx.lineTo(30,60);  // 返回左点
+            ctx.stroke()
+
+            // 绘制矩形
+            ctx.moveTo(80,60);
+            ctx.lineTo(120,60);
+            ctx.lineTo(120,90);
+            ctx.lineTo(80,90);
+            ctx.lineTo(80,60);
+            ctx.stroke()
+        }
+
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="200" style="border: 2px dashed lightblue;"></canvas>
+</body>
+</html>

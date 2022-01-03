@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.2 Canvas元素</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            // 1.获取Canvas对象
+            var cnv = document.getElementById("canvas");
+            // 2.获取上下文环境对象context
+            var ctx = cnv.getContext("2d");
+            // 3.开始绘制图形
+            ctx.moveTo(0, 0);  // (x1, y1)  起点坐标
+            ctx.lineTo(100,50);   // (x2, y2)  终点坐标
+            ctx.stroke();  // 绘制
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="150" style="border: 1px solid hotpink;"></canvas>
+</body>
+</html>
