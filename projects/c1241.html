@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.4.1 描边矩形</title>
+    <script>
+        function getOb(id){
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+
+            ctx.strokeStyle = "lightgreen";
+            ctx.strokeRect(60, 60, 120, 90);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="200" style="border: 2px dotted hotpink;"></canvas>
+</body>
+</html>

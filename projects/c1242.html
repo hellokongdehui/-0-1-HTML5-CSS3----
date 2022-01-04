@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.4.2 填充矩形</title>
+    <script>
+        function getOb(id){
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+
+            ctx.fillStyle = "hotpink";
+            ctx.fillRect(60, 60, 120, 90);
+
+            // 描边加填充
+            ctx.strokeStyle = "red";
+            ctx.strokeRect(30, 30, 45, 60);
+            ctx.fillStyle = "lightgreen";
+            ctx.fillRect(30, 30, 45, 60);
+
+            // 两个矩形
+            ctx.fillStyle = "lightblue";
+            ctx.fillRect(180, 180, 60, 60);
+            ctx.fillStyle = "rgba(0,0,255,0.6";
+            ctx.fillRect(210, 210, 60, 60);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="300" style="border: 2px dotted lightblue;"></canvas>
+</body>
+</html>
