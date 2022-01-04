@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.4.4 清空矩形</title>
+    <script>
+        function getOb(id){
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+
+            // 绘制描边矩形
+            ctx.strokeStyle = "blue";
+            ctx.rect(10, 20, 100, 80);  // (x, y, width, height)
+            ctx.stroke();
+
+            // 绘制填充矩形
+            ctx.fillStyle = "lightblue";
+            ctx.rect(10, 20, 100, 80);  // (x, y, width, height)
+            ctx.fill();
+
+            // 清空选定区域
+            ctx.clearRect(20, 40, 60, 30);
+
+            // 绘制hotpink色图形
+            ctx.fillStyle = "hotpink";
+            ctx.fillRect(120, 120, 120, 120,);
+
+            // 点击按钮清空选定区域
+            var btn1 = getOb("btn1");
+            btn1.onclick = function(){
+                ctx.clearRect(130, 130, 100, 100);
+            };
+
+            // 点击按钮清空全部
+            var btn2 = getOb("btn2");
+            btn2.onclick = function(){
+                ctx.clearRect(0, 0 , cnv.width, cnv.height);
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="600" style="border: 2px dotted hotpink;"></canvas><br/>
+    <input id="btn1" type="button" value="清空选定区域" />
+    <input id="btn2" type="button" value="清空全部图形">
+</body>
+</html>
