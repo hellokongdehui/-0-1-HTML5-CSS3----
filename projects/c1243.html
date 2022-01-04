@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.4.3 rect()方法</title>
+    <script>
+        function getOb(id){
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+
+            // 绘制描边矩形
+            ctx.strokeStyle = "blue";
+            ctx.rect(10, 20, 100, 80);  // (x, y, width, height)
+            ctx.stroke();
+
+            // 绘制填充矩形
+            ctx.fillStyle = "lightblue";
+            ctx.rect(10, 20, 100, 80);  // (x, y, width, height)
+            ctx.fill();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="600" style="border: 2px dotted hotpink;"></canvas>
+</body>
+</html>
