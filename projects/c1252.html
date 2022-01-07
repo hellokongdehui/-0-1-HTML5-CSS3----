@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.5.2 canvas绘制正多边形</title>
+    <script>
+        function getOb(id){
+            return document.getElementById(id);
+        }
+
+        window.onload = function(){
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+            // 调用自定义的方法createPolygon()
+            createPolygon(ctx, 6, 100, 75, 50);
+            ctx.fillStyle = "hotpink";
+            ctx.fill();
+        }
+        /* 
+        * n:表示n边形
+        * dx、dy：表示n边形中心坐标
+        * size：n边形的大小
+        */
+        function createPolygon(ctx, n, dx, dy, size) {
+            ctx.beginPath();  // 开始一条新路径
+            var degree = (2 * Math.PI)/ n;  // 每个顶点到与中心连线之间的夹角
+            for (var i = 0; i < n; i++) {
+                var x = Math.cos(i * degree);
+                var y = Math.sin(i * degree);
+                ctx.lineTo(x * size + dx, y * size +dy);
+            }
+            ctx.closePath();
+        }
+    </script>
+</head>
+<body>
+        <canvas id="canvas" width="400" height="300" style="border: 2px dashed lightblue;"></canvas>
+</body>
+</html>

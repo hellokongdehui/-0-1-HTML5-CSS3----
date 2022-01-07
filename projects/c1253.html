@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.5.3 canvas绘制五角星</title>
+    <script>
+        function getOb(id){
+            return document.getElementById(id);
+        };
+        window.onload = function(){
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+
+            ctx.beginPath();
+            for (var i = 0; i < 5; i++) {
+                ctx.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * 50 + 100,
+                -Math.sin((18 + i * 72) * Math.PI / 180) * 50 + 100);
+                ctx.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * 25 + 100,
+                -Math.sin((54 + i * 72) * Math.PI / 180) * 25 + 100)
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="240" style="border: 3px dashed hotpink;"></canvas>
+</body>
+</html>

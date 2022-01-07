@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.6 实战题：绘制调色板</title>
+    <script>
+        function getOb(id){
+            return  document.getElementById(id);
+        };
+        window.onload = function() {
+            var cnv = getOb("canvas");
+            var ctx = cnv.getContext("2d");
+
+            for (var i = 0; i < 8; i++) {
+                for (var j = 0; j < 8; j++) {
+                    ctx.fillStyle = "rgb(" + Math.floor(255 - 42.5 * i) +"," + Math.floor(255 - 42.5 * j) + ",0)";
+                    ctx.fillRect(j * 25, i * 25, 25, 25);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="200" style="border: 2px solid gray;"></canvas>
+</body>
+</html>
