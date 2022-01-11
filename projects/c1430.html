@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.2 属性选择器</title>
+    <style>
+        /* 清除所有元素默认的padding和margin */
+        *{padding: 0; margin: 0;}
+        /* 清除列表项符号 */
+        ul{list-style-type: none;}
+        a
+        {
+            display: inline-block;
+            font-size: 16px;
+            height: 28px;
+            line-height: 32px;
+            color: hotpink;
+        }
+        /* 匹配doc文件 */
+        a[href$="doc"]::before
+        {
+            content: url("img/1.png");
+        }
+        /* 匹配PDF文件 */
+        a[href$="pdf"]::before
+        {
+            content: url("img/2.png");
+        }
+        /* 匹配ppt文件 */
+        a[href$="ppt"]::before
+        {
+            content:url("img/3.png");
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="test.doc" download>下载doc文件</a></li>
+        <li><a href="test.pdf" download>下载pdf文件</a></li>
+        <li><a href="test.ppt" download>下载ppt文件</a></li>
+    </ul>
+</body>
+</html>
