@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.3 子元素伪类选择器 隔行换色</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        ul{list-style-type: none;}
+        ul li
+        {
+            height: 30px;
+            text-align: center;
+            color: magenta;
+        }
+        /* 设置奇数列的背景颜色 */
+        ul li:nth-child(odd)
+        {
+            background-color: lightpink;
+        }
+        ul li:nth-child(even)
+        {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+    </ul>
+</body>
+</html>
