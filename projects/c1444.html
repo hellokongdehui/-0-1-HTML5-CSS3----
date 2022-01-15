@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.4.4 UI伪类选择器 :enabled和:disabled</title>
+    <style>
+        input:enabled
+        {
+            outline: 1px solid blue;
+        }
+        input:disabled
+        {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p><label for="enabled">可用：</label><input id="enabled" type="text"></p>
+        <p><label for="disabled">不可用：</label><input id="disabled" type="text" disabled></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.4.5 UI伪类选择器 :read-write和:read-only</title>
+    <style>
+        input:read-write
+        {
+            outline: 1px solid green;
+        }
+        input:read-only
+        {
+            outline: 1px solid red;
+        }
+        /* 兼容Firefox浏览器(为Firefox单独设置) */
+        input:-moz-read-write
+        {
+            outline: 1px solid blue;
+        }
+        input:-moz-read-only
+        {
+            outline: 1px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <p><label for="tex1">可读写：</label><input type="text" id="tex1"></p>
+        <p><label for="tex2">仅可读：</label><input type="text" id="tex2" value="不可写" readonly></p>
+    </form>
+</body>
+</html>
