@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.5.3 伪类选择器 :target</title>
+    <style>
+        :target h3
+        {
+            color: hotpink;
+        }
+        :target ul
+        {
+            color: indianred;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#music">推荐音乐</a>
+        <a href="#movie">推荐电影</a>
+        <a href="#article">推荐文章</a>
+    </div>
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    <div id="music">
+        <h3>推荐音乐</h3>
+        <ul>
+            <li>可乐-赵紫骅</li>
+            <li>高山低谷-郑秀文</li>
+            <li>幼稚完-林峯</li>
+        </ul>
+    </div>
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    <div id="movie">
+        <h3>推荐电影</h3>
+        <ul>
+            <li>周星驰系列</li>
+            <li>黑夜传说系列</li>
+            <li>生化危机系列</li>
+        </ul>
+    </div>
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    ······<br />
+    <div id="article">
+        <h3>推荐文章</h3>
+        <ul>
+            <li>精通HTML</li>
+            <li>精通CSS</li>
+            <li>精通JavaScript</li>
+        </ul>
+    </div>
+</body>
+</html>
