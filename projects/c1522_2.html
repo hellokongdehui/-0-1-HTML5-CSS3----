@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.2.2 text-shadow 凹凸效果</title>
+    <style>
+        span
+        {
+            font-size: 60px;
+            text-shadow: -3px 0 0 lightblue,  /* 向左阴影 */
+                         0 -3px 0 blue,  /* 向上阴影 */
+                         3px 0 0 blueviolet,  /* 向右阴影 */
+                         0 3px 0 yellow  /* 向下阴影 */
+
+        }
+        /* 凸起效果 */
+        #d1
+        {
+            display: inline-block;
+            padding: 18px;
+            background-color: rgb(231, 229, 229);
+            font-weight: bold;
+            font-style: italic;
+            color: mediumblue;
+            font-size: 60px;
+            text-shadow: -3px 0 0 white,
+                         0 -3px 0 white,
+                         3px 0 0 grey,
+                         0 3px 0 grey;
+        }
+        /* 凹陷效果 */
+        #d2
+        {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 18px;
+            background-color: rgb(231, 229, 229);
+            font-weight: bold;
+            font-style: italic;
+            color: orangered;
+            font-size: 60px;
+            text-shadow: -3px 0 0 grey,
+                         0 -3px 0 grey,
+                         3px 0 0 white,
+                         0 3px 0 white;
+        }
+    </style>
+</head>
+<body>
+    <span>腾讯科技 Tencent</span>
+    <div id="d1">字节跳动 Bytedance</div>
+    <div id="d2">阿里巴巴 Alibaba</div>
+</body>
+</html>
