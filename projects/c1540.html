@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.4 文本溢出：text-overflow</title>
+    <style type="text/css">
+        div
+        {
+            width: 400px;
+            height: 200px;
+            border: 2px dashed blue;
+            /* 不可少的三部曲 */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div>稀土掘金是一个技术类内容分享社区，基于互联网技术的优质内容的发现、分享平台，
+        包括iOS、Android、前端、后端、设计等分类下的每日精选内容。
+        主要面对互联网公司的技术开发者、产品经理、运营等人群进行新技术的内容分发。
+        移动端还有收藏、读过等对用户行为的记录，让用户能够更加方便的找到曾经阅读或收藏过的文章。</div>
+</body>
+</html>
