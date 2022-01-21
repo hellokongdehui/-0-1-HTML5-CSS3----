@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.4.2 径向渐变 1.圆心位置 position</title>
+    <style>
+        /* 设置div公共样式 */
+        div {
+            width: 200px;
+            height: 150px;
+            margin-bottom: 10px;
+            line-height: 150px;
+            text-align: center;
+            color: white;
+        }
+        #div1 {
+            background: -webkit-radial-gradient(center, orange, green);
+        }
+        #div2 {
+            background: -webkit-radial-gradient(center center, orange, green);
+        }
+        #div3 {
+            background: -webkit-radial-gradient(top, orange, green);
+        }
+        #div4 {
+            background: -webkit-radial-gradient(right, orange, green);
+        }
+        #div5 {
+            background: -webkit-radial-gradient(right center, orange, green);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">center</div>
+    <div id="div2">center center</div>
+    <div id="div3">top</div>
+    <div id="div4">right</div>
+    <div id="div5">right center</div>
+</body>
+</html>
