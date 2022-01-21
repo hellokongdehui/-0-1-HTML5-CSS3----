@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.3 RGBA颜色 RGBA颜色和opacity属性比较</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        ul {
+            display: inline-block;
+            list-style: none;
+            width: 200px;
+        }
+        li {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* 第一个li使用rgba */
+        li:first-child {
+            background-color: rgba(200, 100, 100, 0.6);
+        }
+        /* 第二个li使用opacity */
+        li:last-child {
+            background-color: rgb(200, 100, 100);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>字节跳动</li>
+        <li>百度技术</li>
+    </ul>
+</body>
+</html>
