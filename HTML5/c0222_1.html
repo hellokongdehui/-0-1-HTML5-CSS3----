@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2.2 新增表单元素 output</title>
+  <script>
+    window.onload = function(){
+      var input = document.getElementsByTagName("input")[0];
+      var output = document.getElementsByTagName("output")[0];
+
+      // 获取range的初始值
+      output.value = input.value;
+      // 拖动滑动条，改变output值
+      input.onchange = function(){
+        output.value = input.value
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action="" method="post">
+    <input type="range" min="-10" max="10" step="2" value="-10">
+    <output></output>
+  </form>
+</body>
+</html>
