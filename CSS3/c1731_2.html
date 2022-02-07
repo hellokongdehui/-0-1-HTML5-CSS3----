@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模糊半径：blur</title>
+  <style>
+    div {
+      width: 200px;
+      height: 100px;
+      border: 1px solid red ;
+      box-shadow:5px 5px 0px 2px red;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var oInput = document.getElementsByTagName("input")[0];
+      var oSpan = document.getElementsByTagName("span")[0];
+      var oDiv = document.getElementsByTagName("div")[0];
+
+      oInput.onchange = function(){
+        var value = this.value;
+        oSpan.innerText = value;
+        oDiv.style.boxShadow = "5px 5px " + value + "px 2px red"
+      };
+    }
+  </script>
+</head>
+<body>
+  <div></div> <br/>
+  <input type="range" max="100" min="0" value="0">
+  <span>0</span>
+</body>
+</html>
